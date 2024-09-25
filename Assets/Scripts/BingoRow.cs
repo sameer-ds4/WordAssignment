@@ -17,12 +17,13 @@ public class BingoRow : MonoBehaviour
 
     private void OnClick()
     {
-        scoreBlock.button.onClick.AddListener(RowDef);
+        // scoreBlock.button.onClick.AddListener(RowDef());
     }
 
-    private void RowDef()
+    public void RowDef(int i)
     {
-        
+        BingoManager.Instance.TransferToBingo(this);
+        // BingoManager.Instance.BingoDec(this);
     }
 }
 

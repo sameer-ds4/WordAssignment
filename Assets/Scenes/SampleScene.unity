@@ -3442,9 +3442,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997978064}
-        m_TargetAssemblyTypeName: BingoManager, Assembly-CSharp
-        m_MethodName: BingoDec
+      - m_Target: {fileID: 752876858}
+        m_TargetAssemblyTypeName: BingoRow, Assembly-CSharp
+        m_MethodName: RowDef
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4900,9 +4900,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997978064}
-        m_TargetAssemblyTypeName: BingoManager, Assembly-CSharp
-        m_MethodName: BingoDec
+      - m_Target: {fileID: 680960472}
+        m_TargetAssemblyTypeName: BingoRow, Assembly-CSharp
+        m_MethodName: RowDef
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6167,9 +6167,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997978064}
-        m_TargetAssemblyTypeName: BingoManager, Assembly-CSharp
-        m_MethodName: BingoDec
+      - m_Target: {fileID: 996540196}
+        m_TargetAssemblyTypeName: BingoRow, Assembly-CSharp
+        m_MethodName: RowDef
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6517,9 +6517,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997978064}
-        m_TargetAssemblyTypeName: BingoManager, Assembly-CSharp
-        m_MethodName: BingoDec
+      - m_Target: {fileID: 345092350}
+        m_TargetAssemblyTypeName: BingoRow, Assembly-CSharp
+        m_MethodName: RowDef
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6921,9 +6921,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997978064}
-        m_TargetAssemblyTypeName: BingoManager, Assembly-CSharp
-        m_MethodName: BingoDec
+      - m_Target: {fileID: 477988600}
+        m_TargetAssemblyTypeName: BingoRow, Assembly-CSharp
+        m_MethodName: RowDef
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7543,12 +7543,14 @@ MonoBehaviour:
   wordFormed: 
   totalScore: 0
   wordRack_Parent: {fileID: 822671089}
+  bingoBoard_Parent: {fileID: 1534680835}
   bingoRows:
   - {fileID: 345092350}
   - {fileID: 680960472}
   - {fileID: 477988600}
   - {fileID: 996540196}
   - {fileID: 752876858}
+  spawnedBlocks: []
   pointButtonBlock: {fileID: 21300000, guid: 3d5a1c59473e0a44a991ad94f0a99e1d, type: 3}
   normalButtonBlock: {fileID: 21300000, guid: dc0e8d4b1ab4f2f4b80277aff26d5d37, type: 3}
 --- !u!4 &1997978065

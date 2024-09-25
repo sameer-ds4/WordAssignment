@@ -89,23 +89,32 @@ public class BingoManager : MonoBehaviour
     }
 
 
-    public void BingoDec(BingoRow i)
+    public void BingoDec(BingoRow selectedRow)
     {
-        i.scoreBlock.button.interactable = false;
-        // bingoRows[i].scoreBlock.button.image = 
-        bingoRows.Remove(i);
+        selectedRow.scoreBlock.button.interactable = false;
+        selectedRow.scoreBlock.button.image.sprite = normalButtonBlock; 
+        bingoRows.Remove(selectedRow);
     }
 
-    public void TransferToBingo(int i)
+    public void TransferToBingo(BingoRow row)
     {
-        foreach (var item in spawnedBlocks)
-        {
-            item.transform.parent = bingoBoard_Parent;
-        }
+        StartCoroutine(LoopAnimate(0, row));
     }
 
-    // IEnumerator LoopAnimate()
-    // {
+    IEnumerator LoopAnimate(int i, BingoRow row)
+    {
+        spawnedBlocks[i].transform.parent = bingoBoard_Parent;
+        spawnedBlocks[i].gameObject.transform.DOMove(row.letterBlocks[i].letterDispay.transform.position, 0.5f);
+        
+        (spawnedBlocks[i].transform as RectTransform).DOSizeDelta((row.letterBlocks[i].letterDispay.transform as RectTransform).sizeDelta, 0.5f);
 
-    // }
+        yield return new WaitForSeconds(0.1f);
+
+        i++;
+
+        if(i < spawnedBlocks.Count)
+            StartCoroutine(LoopAnimate(i, row));
+        else
+            BingoDec(row);
+    }
 }
